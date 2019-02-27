@@ -8,15 +8,15 @@ OKGREEN='\033[92m'
 OKORANGE='\033[93m'
 RESET='\e[0m'
 
-echo -e "$OKRED                ____               $RESET"
-echo -e "$OKRED    _________  /  _/___  ___  _____$RESET"
-echo -e "$OKRED   / ___/ __ \ / // __ \/ _ \/ ___/$RESET"
-echo -e "$OKRED  (__  ) / / // // /_/ /  __/ /    $RESET"
-echo -e "$OKRED /____/_/ /_/___/ .___/\___/_/     $RESET"
-echo -e "$OKRED               /_/                 $RESET"
-echo -e "$RESET"
-echo -e "$OKORANGE + -- --=[http://crowdshield.com$RESET"
-echo ""
+#echo -e "$OKRED                ____               $RESET"
+#echo -e "$OKRED    _________  /  _/___  ___  _____$RESET"
+#echo -e "$OKRED   / ___/ __ \ / // __ \/ _ \/ ___/$RESET"
+#echo -e "$OKRED  (__  ) / / // // /_/ /  __/ /    $RESET"
+#echo -e "$OKRED /____/_/ /_/___/ .___/\___/_/     $RESET"
+#echo -e "$OKRED               /_/                 $RESET"
+#echo -e "$RESET"
+#echo -e "$OKORANGE + -- --=[http://crowdshield.com$RESET"
+#echo ""
 
 INSTALL_DIR=/usr/share/sniper
 LOOT_DIR=/usr/share/sniper/loot
@@ -52,17 +52,17 @@ mkdir -p $PLUGINS_DIR/nmap_scripts/ 2> /dev/null
 echo -e "$OKORANGE + -- --=[Downloading extensions...$RESET"
 git clone https://github.com/1N3/Findsploit.git 
 git clone https://github.com/1N3/BruteX.git 
-git clone https://github.com/1N3/Goohak.git 
-git clone https://github.com/1N3/XSSTracer.git 
+#git clone https://github.com/1N3/Goohak.git 
+#git clone https://github.com/1N3/XSSTracer.git 
 git clone https://github.com/1N3/MassBleed.git 
-git clone https://github.com/1N3/SuperMicro-Password-Scanner 
+#git clone https://github.com/1N3/SuperMicro-Password-Scanner 
 git clone https://github.com/Dionach/CMSmap.git 
 git clone https://github.com/0xsauby/yasuo.git 
 git clone https://github.com/johndekroon/serializekiller.git 
 git clone https://github.com/aboul3la/Sublist3r.git 
 git clone https://github.com/nccgroup/shocker.git 
 git clone --depth 1 https://github.com/drwetter/testssl.sh.git 
-git clone https://github.com/lunarca/SimpleEmailSpoofer 
+#git clone https://github.com/lunarca/SimpleEmailSpoofer 
 git clone https://github.com/arthepsy/ssh-audit 
 git clone https://github.com/m0rtem/CloudFail.git
 wget https://svn.nmap.org/nmap/scripts/http-vuln-cve2017-5638.nse -O /usr/share/nmap/scripts/http-vuln-cve2017-5638.nse
@@ -82,8 +82,8 @@ mkdir $LOOT_DIR/reports -p 2> /dev/null
 cp -f $INSTALL_DIR/bin/clamav-exec.nse /usr/share/nmap/scripts/ 2> /dev/null
 chmod +x $INSTALL_DIR/sniper
 chmod +x $INSTALL_DIR/bin/dnsdict6
-chmod +x $PLUGINS_DIR/Goohak/goohak
-chmod +x $PLUGINS_DIR/XSSTracer/xsstracer.py
+#chmod +x $PLUGINS_DIR/Goohak/goohak
+#chmod +x $PLUGINS_DIR/XSSTracer/xsstracer.py
 chmod +x $PLUGINS_DIR/MassBleed/massbleed
 chmod +x $PLUGINS_DIR/MassBleed/heartbleed.py
 chmod +x $PLUGINS_DIR/MassBleed/openssl_ccs.pl
@@ -91,16 +91,16 @@ chmod +x $PLUGINS_DIR/MassBleed/winshock.sh
 chmod +x $PLUGINS_DIR/SuperMicro-Password-Scanner/supermicro_scan.sh
 chmod +x $PLUGINS_DIR/testssl.sh/testssl.sh
 rm -f /usr/bin/sniper
-rm -f /usr/bin/goohak
-rm -f /usr/bin/xsstracer
+#rm -f /usr/bin/goohak
+#rm -f /usr/bin/xsstracer
 rm -f /usr/bin/findsploit
 rm -f /usr/bin/copysploit
 rm -f /usr/bin/compilesploit
 rm -f /usr/bin/massbleed
 rm -f /usr/bin/testssl
 ln -s $INSTALL_DIR/sniper /usr/bin/sniper
-ln -s $PLUGINS_DIR/Goohak/goohak /usr/bin/goohak
-ln -s $PLUGINS_DIR/XSSTracer/xsstracer.py /usr/bin/xsstracer
+#ln -s $PLUGINS_DIR/Goohak/goohak /usr/bin/goohak
+#ln -s $PLUGINS_DIR/XSSTracer/xsstracer.py /usr/bin/xsstracer
 ln -s $PLUGINS_DIR/Findsploit/findsploit /usr/bin/findsploit
 ln -s $PLUGINS_DIR/Findsploit/copysploit /usr/bin/copysploit
 ln -s $PLUGINS_DIR/Findsploit/compilesploit /usr/bin/compilesploit
